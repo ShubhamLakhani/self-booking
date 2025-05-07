@@ -12,7 +12,7 @@ type FormData = {
 export default function BookingForm({
   onSubmitSuccess
 }: {
-  onSubmitSuccess: (data: any) => void;
+  onSubmitSuccess: (data: { fullName: string; mobile: string; checkInDate: string; service: string; pets: { Dog: number; Cat: number; Bird: number } }) => void;
 }) {
   const [selectedService, setSelectedService] = useState('Boarding');
   const [pets, setPets] = useState({ Dog: 0, Cat: 0, Bird: 0 });

@@ -10,7 +10,7 @@ export default function SuccessScreen({
     pets: Pets;
   }) {
     const summary = Object.entries(pets)
-      .filter(([_, count]) => count > 0)
+      .filter(([, count]) => count > 0)
       .map(([type, count]) => `${count} ${type}${count > 1 ? 's' : ''}`)
       .join(' and ');
   

@@ -27,7 +27,7 @@ export default function Widget() {
     setBookingData(null);
   };
 
-  const handleFormSubmit = (data: any) => {
+  const handleFormSubmit = (data: BookingData) => {
     setBookingData(data);
     setStep('success');
   };

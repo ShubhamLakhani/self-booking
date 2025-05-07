@@ -5,7 +5,7 @@ import Widget from '~/components/widget/Widget';
 
 export default function EmbedPage() {
 
-    const [allowed, setAllowed] = useState(false);
+    // const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
     const clientId = new URLSearchParams(window.location.search).get('clientId');
