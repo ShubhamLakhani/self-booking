@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Widget from '~/components/widget/Widget';
 
 export default function EmbedPage() {
