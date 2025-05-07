@@ -9,7 +9,7 @@
     }
 
     const iframe = document.createElement('iframe');
-    iframe.src = `https://localhost:3001/embed?clientId=${clientId}`;
+    iframe.src = `https://self-booking.vercel.app/embed?clientId=${clientId}`;
     // iframe.style = `
     //   position: fixed;
     //   bottom: 24px;
