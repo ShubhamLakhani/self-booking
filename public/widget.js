@@ -16,7 +16,7 @@
     iframe.style.bottom = '24px';
     iframe.style.right = '24px';
     iframe.style.width = '100px';
-    iframe.style.height = '50px'; // small height for button only
+    iframe.style.height = '100px'; // small height for button only
     iframe.style.border = 'none';
     iframe.style.background = 'transparent';
     iframe.style.zIndex = '999999';
