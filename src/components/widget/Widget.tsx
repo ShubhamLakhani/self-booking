@@ -37,7 +37,7 @@ export default function Widget() {
       {!visible && <FloatingButton onClick={() => setVisible(true)} />}
 
       {visible && (
-        <div className="">
+        <div className="w-[300px] h-[400px] bg-white shadow-lg rounded-lg fixed bottom-4 right-4 z-50 overflow-hidden border border-gray-200">
           <div className="flex justify-end p-3">
             <button onClick={closeWidget} className="text-2xl font-light text-gray-400">&times;</button>
           </div>
