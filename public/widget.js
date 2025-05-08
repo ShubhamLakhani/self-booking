@@ -10,7 +10,7 @@
 
     const iframe = document.createElement('iframe');
     iframe.id = 'booking-widget-iframe';
-    iframe.src = `https://widget.yoursaas.com/embed?clientId=${clientId}`;
+    iframe.src = `https://self-booking.vercel.app/embed?clientId=${clientId}`;
     iframe.allow = 'clipboard-write';
     iframe.style.position = 'fixed';
     iframe.style.bottom = '24px';
