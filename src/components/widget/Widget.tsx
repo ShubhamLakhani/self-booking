@@ -21,10 +21,16 @@ export default function Widget() {
 
   const [bookingData, setBookingData] = useState<BookingData | null>(null);
 
+  const openWidget = () => {
+    setVisible(true);
+    window.parent.postMessage({ type: 'WIDGET_RESIZE', width: '400px', height: '650px' }, '*');
+  };
+  
   const closeWidget = () => {
     setVisible(false);
     setStep('welcome');
     setBookingData(null);
+    window.parent.postMessage({ type: 'WIDGET_RESET' }, '*');
   };
 
   const handleFormSubmit = (data: BookingData) => {
@@ -34,17 +40,8 @@ export default function Widget() {
 
   return (
     <div
-      style={{
-        position: 'fixed',
-        bottom: '24px',
-        right: '24px',
-        zIndex: 9999,
-        width: visible ? '380px' : 'auto',
-        height: visible ? 'auto' : 'auto',
-        backgroundColor: 'transparent',
-      }}
     >
-      {!visible && <FloatingButton onClick={() => setVisible(true)} />}
+      {!visible && <FloatingButton onClick={openWidget} />}
 
       {visible && (
         <div className="w-[300px] h-[400px] bg-white shadow-lg rounded-lg fixed bottom-4 right-4 z-50 overflow-hidden border border-gray-200">
