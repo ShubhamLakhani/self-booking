@@ -29,10 +29,6 @@
         iframe.style.height = event.data.height || '580px';
       }
 
-      if (event.data?.type === 'WIDGET_RESET') {
-        iframe.style.width = '100px';
-        iframe.style.height = '50px';
-      }
     });
   }
 
