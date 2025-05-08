@@ -33,7 +33,17 @@ export default function Widget() {
   };
 
   return (
-    <>
+    <div
+      style={{
+        position: 'fixed',
+        bottom: '24px',
+        right: '24px',
+        zIndex: 9999,
+        width: visible ? '380px' : 'auto',
+        height: visible ? 'auto' : 'auto',
+        backgroundColor: 'transparent',
+      }}
+    >
       {!visible && <FloatingButton onClick={() => setVisible(true)} />}
 
       {visible && (
@@ -52,6 +62,6 @@ export default function Widget() {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 }

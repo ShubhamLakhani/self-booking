@@ -10,15 +10,18 @@
 
     const iframe = document.createElement('iframe');
     iframe.src = `https://self-booking.vercel.app/embed?clientId=${clientId}`;
-    iframe.style = `
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      border: none;
-      border-radius: 16px;
-      background: transparent;
-      z-index: 9999;
-    `;
+    iframe.allow = 'clipboard-write';
+    iframe.loading = 'lazy';
+    iframe.style.position = 'fixed';
+    iframe.style.bottom = '24px';
+    iframe.style.right = '24px';
+    iframe.style.width = 'auto';
+    iframe.style.height = 'auto';
+    iframe.style.border = 'none';
+    iframe.style.background = 'transparent';
+    iframe.style.zIndex = '9999';
+    iframe.style.overflow = 'visible'; // allow dropdowns/pickers
+    iframe.style.pointerEvents = 'auto'; // allow interaction
 
     document.body.appendChild(iframe);
   }
