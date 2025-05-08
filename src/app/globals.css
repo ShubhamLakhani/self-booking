@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-orange: #FF4E00;
+  --color-black: #121212;
+  --color-gray: #D0D5DD;
+  --padding-24: 24px;
+  --margin-60: 60px;
+  --margin-50: 50px;
+  --margin-25: 25px;
+  --font-size-24: 24px;
+  --font-size-14: 14px;
+}
+
 body {
     margin: 0;
     background: transparent;
-    font-family: system-ui, sans-serif;
   }
