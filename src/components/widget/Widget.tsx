@@ -31,7 +31,7 @@ export default function Widget() {
     setVisible(false);
     setStep('welcome');
     setBookingData(null);
-    window.parent.postMessage({ type: 'WIDGET_RESET' }, '*');
+    // window.parent.postMessage({ type: 'WIDGET_RESET' }, '*');
   };
 
   const handleFormSubmit = (data: BookingData) => {

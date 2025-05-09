@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Widget from '~/components/widget/Widget';
+import { getDeviceInfo } from '~/utils/getDeviceInfo';
 
 export default function EmbedPage() {
 
@@ -17,6 +18,22 @@ export default function EmbedPage() {
     // fetch(`/api/validate-domain?clientId=${clientId}&domain=${refDomain}`)
     //   .then(res => setAllowed(res.ok))
     //   .catch(() => setAllowed(false));
+  }, []);
+
+
+  useEffect(() => {
+    const device = getDeviceInfo();
+    const clientId = new URLSearchParams(window.location.search).get('clientId');
+    console.log('Device Info:', device);
+
+    // fetch('https://your-saas.com/api/log-device', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     clientId,
+    //     ...device,
+    //   }),
+    // });
   }, []);
 
   return (
