@@ -19,6 +19,7 @@ interface BookingData {
 export default function Widget() {
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState<'welcome' | 'form' | 'success'>('welcome');
+  const referrer = document.referrer;
 
   const [bookingData, setBookingData] = useState<BookingData | null>(null);
 
