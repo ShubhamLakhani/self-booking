@@ -21,6 +21,8 @@ export default function Widget() {
   const [step, setStep] = useState<'welcome' | 'form' | 'success'>('welcome');
   const referrer = document.referrer;
 
+    console.log({ referrer });
+
   const [bookingData, setBookingData] = useState<BookingData | null>(null);
 
   const openWidget = () => {
