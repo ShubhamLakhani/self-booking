@@ -19,9 +19,6 @@ interface BookingData {
 export default function Widget() {
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState<'welcome' | 'form' | 'success'>('welcome');
-  const referrer = document.referrer;
-
-    console.log({ referrer });
 
   const [bookingData, setBookingData] = useState<BookingData | null>(null);
 
@@ -41,6 +38,22 @@ export default function Widget() {
     setBookingData(data);
     setStep('success');
   };
+
+    useEffect(() => {
+         const clientId = new URLSearchParams(window.location.search).get("clientId");
+
+          let refDomain: string | null = null;
+          if (typeof document !== "undefined" && document.referrer) {
+            try {
+              refDomain = new URL(document.referrer).hostname;
+            } catch (err) {
+              console.warn("Invalid referrer URL", err);
+            }
+          }
+        
+          console.log("Client ID:", clientId);
+          console.log("Referrer domain:", refDomain);
+    }, [])
 
   return (
     <div
